@@ -1,0 +1,181 @@
+$colorPrim1: #035ade;
+$colorPrim2: #013d98;
+$colorSec1: #a3b3c8;
+
+$colorText1: #ffffff;
+$colorText2: #000000;
+$colorText3: #035ade;
+
+$containerSize: 960px;
+
+* {
+  font-family: "Lora", serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: $containerSize;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin separador {
+  content: "";
+  width: 114px;
+  background: $colorText2;
+  height: 2px;
+  display: block;
+  margin: 10px auto;
+}
+
+.header {
+  background: $colorPrim1;
+  padding: 30px 20px;
+  text-align: center;
+
+  h1 {
+    color: $colorText1;
+    font-size: 2em;
+  }
+  a {
+    display: inline-block;
+    color: $colorText1;
+    font-size: 1.25em;
+    border: 2px solid;
+    padding: 5px 40px;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      background: $colorPrim2;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    nav {
+      margin-top: 20px;
+    }
+  }
+}
+
+.introducao {
+  background: $colorSec1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 0;
+
+  p {
+    color: $colorText2;
+    font-size: 1.5em;
+    text-align: center;
+
+    &::before {
+      @include separador();
+    }
+    &::after {
+      @include separador();
+    }
+  }
+  @media screen and (max-width: 767px) {
+    p {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.palavras {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 2px solid $colorSec1;
+
+  h2 {
+    color: $colorText3;
+    font-size: 1.5em;
+  }
+  textarea {
+    display: block;
+    max-width: 546px;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1.125em;
+    color: $colorText3;
+    border: 2px solid;
+    &::placeholder {
+      color: $colorSec1;
+    }
+  }
+  button {
+    font-size: 1.25em;
+    border: 2px solid;
+    padding: 5px 40px;
+    text-transform: uppercase;
+    border: none;
+    background: $colorPrim1;
+    color: $colorText1;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      background: $colorPrim2;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    textarea {
+      max-width: 300px;
+    }
+    h2 {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.artigos {
+  padding: 30px 0;
+  .container {
+    justify-content: center;
+    li {
+      font-size: 1.25em;
+      color: $colorText3;
+      padding: 5px;
+      font-weight: bold;
+    }
+  }
+}
+
+.rodape {
+  background: $colorPrim1;
+  padding: 30px 0;
+  div {
+    justify-content: center;
+    p {
+      color: $colorText1;
+      font-size: 1.25em;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    div {
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+}
