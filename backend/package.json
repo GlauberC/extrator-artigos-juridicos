@@ -1,0 +1,16 @@
+{
+  "name": "extrajuriserver",
+  "version": "1.0.0",
+  "description": "Servidor da aplicação extrajuri",
+  "main": "index.js",
+  "author": "Glauber Carvalho",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

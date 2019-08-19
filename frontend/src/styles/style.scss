@@ -46,7 +46,7 @@ $containerSize: 960px;
 
   h1 {
     color: $colorText1;
-    font-size: 2em;
+    font-size: 3em;
     text-shadow: 2px 2px 1px $colorPrim2;
   }
   a {
@@ -173,6 +173,13 @@ $containerSize: 960px;
       color: $colorText3;
       padding: 5px;
       font-weight: bold;
+      display: flex;
+      justify-content: space-around;
+      .frequencia {
+        color: $colorSec3;
+        margin-left: 20px;
+        font-size: 1.25rem;
+      }
     }
   }
 }

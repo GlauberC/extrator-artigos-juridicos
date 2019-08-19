@@ -10,30 +10,19 @@ export default App => {
   const [artigos, setArtigos] = useState([]);
 
   const handleClick = async e => {
-    console.log(artigos);
     e.preventDefault();
     const data = {
       palavras: palavras.replace(/\s+/gi, " ").split(" ")
     };
-    const response = await api.post("/artigos", data);
-    let listaArtigos = [];
-    for (let keys in response.data) {
-      listaArtigos.push({ nome: keys, ocorrencia: response.data[keys] });
-    }
-    listaArtigos.sort(function(a, b) {
-      return b.ocorrencia - a.ocorrencia;
-    });
-    setArtigos(listaArtigos);
+    const response = await api.post("/arts", data);
+    setArtigos(response.data);
   };
 
   return (
     <div className="interface">
       <header className="header">
         <div className="container">
-          <h1>
-            Extrator de Artigos
-            <br /> Jurídicos
-          </h1>
+          <h1>ExtraJuri</h1>
           <nav>
             <a href="#">sobre</a>
           </nav>
@@ -70,7 +59,7 @@ export default App => {
           <div className="container">
             <ul>
               {artigos.length !== 0 ? (
-                artigos.map(artigo => <li key={artigo.nome}>{artigo.nome}</li>)
+                artigos.map(artigo => <li key={artigo.nome}>{artigo.nome} <span className = "frequencia">{artigo.frequencia}%</span></li>)
               ) : (
                 <li>Nenhuma consulta feita</li>
               )}
