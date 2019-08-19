@@ -1,6 +1,8 @@
 $colorPrim1: #035ade;
 $colorPrim2: #013d98;
-$colorSec1: #a3b3c8;
+$colorSec1: #e7eaef;
+$colorSec2: #9b9b9b;
+$colorSec3: #747f8e;
 
 $colorText1: #ffffff;
 $colorText2: #000000;
@@ -39,10 +41,13 @@ $containerSize: 960px;
   background: $colorPrim1;
   padding: 30px 20px;
   text-align: center;
+  border: 1px solid transparent;
+  border-radius: 3px;
 
   h1 {
     color: $colorText1;
     font-size: 2em;
+    text-shadow: 2px 2px 1px $colorPrim2;
   }
   a {
     display: inline-block;
@@ -51,6 +56,9 @@ $containerSize: 960px;
     border: 2px solid;
     padding: 5px 40px;
     text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px 0px $colorPrim2;
+    text-shadow: 2px 2px 1px $colorPrim2;
 
     &:hover {
       opacity: 0.9;
@@ -73,19 +81,22 @@ $containerSize: 960px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
+  border-radius: 3px;
   padding: 30px 0;
 
   p {
     color: $colorText2;
     font-size: 1.5em;
     text-align: center;
+    text-shadow: 2px 2px 3px $colorSec2;
 
     &::before {
       @include separador();
+      box-shadow: 2px 2px 1px $colorSec2;
     }
     &::after {
       @include separador();
+      box-shadow: 2px 2px 1px $colorSec2;
     }
   }
   @media screen and (max-width: 767px) {
@@ -107,6 +118,7 @@ $containerSize: 960px;
   h2 {
     color: $colorText3;
     font-size: 1.5em;
+    font-weight: bold;
   }
   textarea {
     display: block;
@@ -116,9 +128,11 @@ $containerSize: 960px;
     font-size: 1.125em;
     color: $colorText3;
     border: 2px solid;
+    border-radius: 5px;
     &::placeholder {
       color: $colorSec1;
     }
+    box-shadow: 1px 1px 1px 0px $colorSec3;
   }
   button {
     font-size: 1.25em;
@@ -129,6 +143,8 @@ $containerSize: 960px;
     background: $colorPrim1;
     color: $colorText1;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px 0px $colorSec3;
 
     &:hover {
       opacity: 0.9;
@@ -164,11 +180,13 @@ $containerSize: 960px;
 .rodape {
   background: $colorPrim1;
   padding: 30px 0;
+  border-radius: 3px;
   div {
     justify-content: center;
     p {
       color: $colorText1;
       font-size: 1.25em;
+      text-shadow: 2px 2px 2px $colorPrim2;
     }
   }
   @media screen and (max-width: 767px) {
