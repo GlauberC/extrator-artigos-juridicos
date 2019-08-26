@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import api from "./services/api";
 import "./styles/reset.css";
-import "./styles/style.scss";
+import "./styles/style.css";
 
 // palavras_selecionadas = ["prisao", "crime", "contrato", "indenizacao", "tutela", "saude", "consumidor", "trafico", "cobranca", "reforma", "drogas", "habeas", "homicidio", "cautelar", "servidor", "constrangimento", "servico", "seguranca", "posse", "concurso", "razoabilidade", "roubo", "violacao", "vicios", "contradicao", "provimento", "militar", "probatorio", "financeira", "flagrante", "apreensao", "cargo", "administracao", "mandado", "prestacao", "cartao", "autoral", "social", "policial", "imovel", "banco", "remuneracao", "prejuizo", "carreira", "veiculo", "taxa", "legalidade", "ofensa", "natureza", "associacao", "empresa", "absolvicao", "salario", "remessa", "devedor", "participacao", "aumento", "custodia", "divida", "anulacao"]
 
